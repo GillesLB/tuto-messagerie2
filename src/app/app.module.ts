@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ErreurComponent } from './erreur/erreur.component';
+import { ListeMessagesService } from 'src/app/services/liste-messages.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { ErreurComponent } from './erreur/erreur.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    ListeMessagesService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
