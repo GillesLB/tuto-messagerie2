@@ -1,18 +1,23 @@
 <div class="container justify-content-center">
 
-  <p class="text-center">Liste :</p>
+  <p class="text-center font-weight-bold">Liste :</p>
 
   <div *ngFor="let message of messages">
     
     <div class="card mt-2">
       <div class="card-header">
-        {{message.titre}}
+        <div class="row justify-content-between">
+          <span class="ml-2">{{message.titre}}</span>
+          <button class="btn btn-danger btn-sm mr-2">Supprimer</button>
+        </div>
       </div>
       <div class="card-body">
         {{message.corps}}
       </div>
       <div class="row justify-content-end mr-3 mb-2">
-        <div class="badge badge-primary">Message n° {{message.numero}}</div>
+        <div class="badge badge-primary">
+          Message n° {{message.numero}}
+        </div>
       </div>
     </div>
 
