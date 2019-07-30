@@ -29,4 +29,15 @@ export class ListeMessagesService implements OnInit {
     return messagesObs;
   }
 
+  deleteMessage(message) {
+    const messageAEnlever = this.messages.findIndex(
+      (messageRecherche) => {
+        if (messageRecherche === message) {
+          return true;
+        }
+      }
+    );
+    this.messages.splice(messageAEnlever, 1);
+  }
+
 }

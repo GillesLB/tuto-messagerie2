@@ -25,4 +25,8 @@ export class ListeMessagesComponent implements OnInit {
     this.messages$.subscribe((message) => { this.messages = message; });
   }
 
+  onDeleteMessage(message) {
+    console.log('M : ', message);
+    this.listeMessagesService.deleteMessage(message);
+  }
 }
