@@ -40,4 +40,8 @@ export class ListeMessagesService implements OnInit {
     this.messages.splice(messageAEnlever, 1);
   }
 
+  addPlus(x, y) {
+    return x + y;
+  }
+
 }
